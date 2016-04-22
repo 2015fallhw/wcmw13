@@ -906,7 +906,12 @@ x6, y6 = mychain.basic_rot(x5, y5, -30)
 # 下方水平單元
 x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
-    return outstring
+    response = make_response(outstring)
+    response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
+    response.headers['Access-Control-Allow-Origin'] = 'http://cdw2-ag100.rhcloud.com'
+    response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
+    response.headers['Access-Control-Max-Age'] = '86400'
+    return response
 
 # 畫 D 函式
 @scrum1_task1.route('/scrum1_week8_d')
@@ -1033,8 +1038,7 @@ mychain.basic(x10, y10, 0+65*3, 0, color="red")
 '''
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    response.headers['Access-Control-Allow-Origin'] = '*'
-    response.headers['Origin'] = '*'
+    response.headers['Access-Control-Allow-Origin'] = 'http://cdw2-ag100.rhcloud.com'
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
@@ -1049,8 +1053,10 @@ def week8_test():
 @scrum1_task1.route('/scrum1_week8_abcd')
 def week8_abcd():
     outstring = week8_main()
-    outstring += "<script type='text/python' src='/ag100/scrum1_week8_a'></script>"
-    outstring += "<script type='text/python' src='/ag100/scrum1_week8_b'></script>"
+    #outstring += "<script type='text/python' src='/ag100/scrum1_week8_a'></script>"
+    #outstring += "<script type='text/python' src='/ag100/scrum1_week8_b'></script>"
+    outstring += "<script type='text/python' src='http://cdw2-ag100.rhcloud.com/ag100/scrum1_week8_a'></script>"
+    outstring += "<script type='text/python' src='http://cdw2-ag100.rhcloud.com/ag100/scrum1_week8_b'></script>"
     outstring += "<script type='text/python' src='/ag100/scrum1_week8_c'></script>"
     outstring += "<script type='text/python' src='/ag100/scrum1_week8_d'></script>"
     outstring += week8_tail()
