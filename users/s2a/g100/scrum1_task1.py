@@ -926,7 +926,7 @@ cango = JSConstructor(window.Cango)
 cobj = JSConstructor(window.Cobj)
 shapedefs = window.shapeDefs
 obj2d = JSConstructor(window.Obj2D)
-cgo = cango("plotarea")
+cgo = cango("plotarea2")
  
 cgo.setWorldCoords(-250, -250, 500, 500) 
  
