@@ -909,7 +909,9 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5000')
+    #response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5000')
+    #response.headers.add('Access-Control-Allow-Origin', 'http://cdw2-ag100.rhcloud.com')
+    response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
