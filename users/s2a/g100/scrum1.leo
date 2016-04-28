@@ -490,12 +490,13 @@ http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1
 
 </t>
 <t tx="leo.20160428085756.1"># 各組分別在各自的 .py 程式中建立應用程式 (第1步/總共3步)
-from flask import Blueprint, render_template, make_response
+from flask import Blueprint, render_template, make_response, request
 
 # 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
 scrum1_task1 = Blueprint('scrum1_task1', __name__, url_prefix='/ag100', template_folder='templates')
 
 # scrum1_task1 為完整可以單獨執行的繪圖程式
+
 </t>
 <t tx="leo.20160428085756.10"># 畫 C 函式
 @scrum1_task1.route('/scrum1_week8_c')
@@ -619,7 +620,8 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    response.headers['Access-Control-Allow-Origin'] = '*'
+    if flask.request.environ["HTTP_ORIGIN"] == "http://localhost" or flask.request.environ["HTTP_ORIGIN"] == "http://cdw2-ag100.rhcloud.com/":
+        response.headers['Access-Control-Allow-Origin'] = flask.request.environ["HTTP_ORIGIN"]
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
