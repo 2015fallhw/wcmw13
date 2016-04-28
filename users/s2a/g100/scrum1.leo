@@ -620,8 +620,12 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    if flask.request.environ["HTTP_ORIGIN"] == "http://localhost" or flask.request.environ["HTTP_ORIGIN"] == "http://cdw2-ag100.rhcloud.com/":
-        response.headers['Access-Control-Allow-Origin'] = flask.request.environ["HTTP_ORIGIN"]
+    from flask import Flask
+    app = Flask(__name__)
+    with app.test_request_context():
+        from flask import request
+        if request.environ["HTTP_ORIGIN"] == "http://localhost" or request.environ["HTTP_ORIGIN"] == "http://cdw2-ag100.rhcloud.com/":
+            response.headers['Access-Control-Allow-Origin'] = request.environ["HTTP_ORIGIN"]
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
