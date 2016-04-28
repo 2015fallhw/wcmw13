@@ -620,10 +620,7 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
-    from flask import Response
-    resp = Response(js, status=200, mimetype='application/json')
-    resp.headers['Access-Control-Allow-Origin'] = 'http://localhost:5000, http://cdw2-ag100.rhcloud.com'
-    #response.headers['Access-Control-Allow-Origin'] = 'http://localhost:5000, http://cdw2-ag100.rhcloud.com'
+    response.headers.add('Access-Control-Allow-Origin', ['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'])
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
