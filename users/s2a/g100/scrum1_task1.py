@@ -1,6 +1,10 @@
 # 各組分別在各自的 .py 程式中建立應用程式 (第1步/總共3步)
 from flask import Blueprint, render_template, make_response
 
+#from flask.ext.cors import CORS
+
+from flask.ext.cors import cross_origin
+
 # 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
 scrum1_task1 = Blueprint('scrum1_task1', __name__, url_prefix='/ag100', template_folder='templates')
 
@@ -789,6 +793,7 @@ mychain.basic(x12,y12, 0, 0, color="red")
 
 # 畫 C 函式
 @scrum1_task1.route('/scrum1_week8_c')
+@cross_origin(['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'])
 def week8_c():
     outstring = '''
 from javascript import JSConstructor
@@ -911,7 +916,7 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     #response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5000')
     #response.headers.add('Access-Control-Allow-Origin', 'http://cdw2-ag100.rhcloud.com')
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    #response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response

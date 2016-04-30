@@ -29,7 +29,7 @@
 <v t="leo.20160428085756.14"><vh>week8_abc</vh></v>
 </v>
 <v t="amd.20160314224120.1" a="E"><vh>@path ./../../../</vh>
-<v t="amd.20160314224203.1" a="E"><vh>@clean myflaskapp.py</vh>
+<v t="amd.20160314224203.1"><vh>@clean myflaskapp.py</vh>
 <v t="amd.20160314224223.1"><vh>myflaskapp declarations</vh></v>
 <v t="amd.20160314224223.2"><vh>index</vh></v>
 <v t="amd.20160314224223.3"><vh>user</vh></v>
@@ -42,6 +42,7 @@
 <v t="amd.20160314224223.10"><vh>fileuploadform</vh></v>
 <v t="amd.20160314224223.11"><vh>download</vh></v>
 </v>
+<v t="amd.20160430132507.1"><vh>@edit setup.py</vh></v>
 </v>
 </v>
 </vnodes>
@@ -492,6 +493,10 @@ http://cdw2-ag100.rhcloud.com/ag100/scrum1_task1
 <t tx="leo.20160428085756.1"># 各組分別在各自的 .py 程式中建立應用程式 (第1步/總共3步)
 from flask import Blueprint, render_template, make_response
 
+#from flask.ext.cors import CORS
+
+from flask.ext.cors import cross_origin
+
 # 利用 Blueprint建立 ag1, 並且 url 前綴為 /ag1, 並設定 template 存放目錄
 scrum1_task1 = Blueprint('scrum1_task1', __name__, url_prefix='/ag100', template_folder='templates')
 
@@ -500,6 +505,7 @@ scrum1_task1 = Blueprint('scrum1_task1', __name__, url_prefix='/ag100', template
 </t>
 <t tx="leo.20160428085756.10"># 畫 C 函式
 @scrum1_task1.route('/scrum1_week8_c')
+@cross_origin(['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'])
 def week8_c():
     outstring = '''
 from javascript import JSConstructor
@@ -622,7 +628,7 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     #response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5000')
     #response.headers.add('Access-Control-Allow-Origin', 'http://cdw2-ag100.rhcloud.com')
-    response.headers.add('Access-Control-Allow-Origin', '*')
+    #response.headers.add('Access-Control-Allow-Origin', '*')
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
