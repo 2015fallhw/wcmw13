@@ -793,7 +793,7 @@ mychain.basic(x12,y12, 0, 0, color="red")
 
 # 畫 C 函式
 @scrum1_task1.route('/scrum1_week8_c')
-@cross_origin(origins=['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'], allow_headers=['Content-Type'])
+@cross_origin(['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'])
 def week8_c():
     outstring = '''
 from javascript import JSConstructor
@@ -913,7 +913,7 @@ x6, y6 = mychain.basic_rot(x5, y5, -30)
 x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
     return outstring
-    
+    '''
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     #response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5000')
@@ -922,6 +922,7 @@ x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
     response.headers['Access-Control-Allow-Methods'] = 'GET, POST, PUT, DELETE'
     response.headers['Access-Control-Max-Age'] = '86400'
     return response
+    '''
 
 # 畫 D 函式
 @scrum1_task1.route('/scrum1_week8_d')
