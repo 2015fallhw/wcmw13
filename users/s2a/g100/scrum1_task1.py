@@ -912,6 +912,8 @@ x6, y6 = mychain.basic_rot(x5, y5, -30)
 # 下方水平單元
 x7, y7 = mychain.basic_rot(x6, y6, -0, color="red")
 '''
+    return outstring
+    
     response = make_response(outstring)
     response.headers['Access-Control-Allow-Headers'] = 'Content-Type'
     #response.headers.add('Access-Control-Allow-Origin', 'http://localhost:5000')
