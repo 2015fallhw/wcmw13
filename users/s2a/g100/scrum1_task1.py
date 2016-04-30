@@ -873,7 +873,7 @@ class chain():
                 "fillColor": color,
                 "border": border,
                 "strokeColor": "tan",
-                "lineWidth": linewidth })(origin='*',headers=['Content-Type','Authorization'])
+                "lineWidth": linewidth })
  
         # hole 為原點位置
         hole = cobj(shapedefs.circle(4), "PATH")
