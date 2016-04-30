@@ -793,7 +793,7 @@ mychain.basic(x12,y12, 0, 0, color="red")
 
 # 畫 C 函式
 @scrum1_task1.route('/scrum1_week8_c')
-@cross_origin(allow_headers=['Content-Type'])
+@cross_origin(origins=['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'], allow_headers=['Content-Type'])
 def week8_c():
     outstring = '''
 from javascript import JSConstructor
