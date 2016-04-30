@@ -505,7 +505,7 @@ scrum1_task1 = Blueprint('scrum1_task1', __name__, url_prefix='/ag100', template
 </t>
 <t tx="leo.20160428085756.10"># 畫 C 函式
 @scrum1_task1.route('/scrum1_week8_c')
-@cross_origin(['http://localhost:5000', 'http://cdw2-ag100.rhcloud.com'])
+@cross_origin()
 def week8_c():
     outstring = '''
 from javascript import JSConstructor
