@@ -19,7 +19,13 @@
 <v t="leo.20160520100842.1" a="E"><vh>@path app</vh>
 <v t="leo.20160520101420.1"><vh>建立 __init__.py 與 views.py</vh></v>
 <v t="leo.20160520100859.1"><vh>@edit __init__.py</vh></v>
-<v t="leo.20160520101130.1"><vh>@edit views.py</vh></v>
+<v t="leo.20160520101130.1"><vh>@edit views.py_tutorial1</vh></v>
+<v t="leo.20160520111105.1"><vh>@edit views.py</vh></v>
+<v t="leo.20160520110931.1"><vh>進入 templates 目錄</vh></v>
+<v t="leo.20160520110909.1" a="E"><vh>@path templates</vh>
+<v t="leo.20160520111627.1"><vh>@edit base.html</vh></v>
+<v t="leo.20160520110947.1"><vh>@edit index.html</vh></v>
+</v>
 </v>
 </v>
 </v>
@@ -33,5 +39,7 @@
 <t tx="leo.20160520101357.1"></t>
 <t tx="leo.20160520101408.1"></t>
 <t tx="leo.20160520101420.1"></t>
+<t tx="leo.20160520110909.1"></t>
+<t tx="leo.20160520110931.1"></t>
 </tnodes>
 </leo_file>
