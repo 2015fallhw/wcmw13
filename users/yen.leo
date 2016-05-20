@@ -12,6 +12,10 @@
 <v t="leo.20160520101324.1"><vh>先跳出  users 目錄</vh></v>
 <v t="leo.20160520094636.2" a="E"><vh>@path ./../</vh>
 <v t="leo.20160520112911.1"><vh>@edit README.md</vh></v>
+<v t="leo.20160520122533.1"><vh>為了要同時在 openshift 平台執行, 利用 setup.py 配置環境</vh></v>
+<v t="leo.20160520122045.1"><vh>@edit setup.py</vh></v>
+<v t="leo.20160520122607.1"><vh>以下為本地端與雲端執行判斷式</vh></v>
+<v t="leo.20160520122051.1"><vh>@edit wsgi.py</vh></v>
 <v t="leo.20160520101343.1"><vh>再進入 microblog 目錄</vh></v>
 <v t="leo.20160520100813.1" a="E"><vh>@path microblog</vh>
 <v t="leo.20160520101357.1"><vh>編輯 run.py</vh></v>
@@ -42,5 +46,7 @@
 <t tx="leo.20160520101420.1"></t>
 <t tx="leo.20160520110909.1"></t>
 <t tx="leo.20160520110931.1"></t>
+<t tx="leo.20160520122533.1"></t>
+<t tx="leo.20160520122607.1"></t>
 </tnodes>
 </leo_file>
