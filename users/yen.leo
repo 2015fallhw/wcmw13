@@ -11,6 +11,7 @@
 <vnodes>
 <v t="leo.20160520101324.1"><vh>先跳出  users 目錄</vh></v>
 <v t="leo.20160520094636.2" a="E"><vh>@path ./../</vh>
+<v t="leo.20160520112911.1"><vh>@edit README.md</vh></v>
 <v t="leo.20160520101343.1"><vh>再進入 microblog 目錄</vh></v>
 <v t="leo.20160520100813.1" a="E"><vh>@path microblog</vh>
 <v t="leo.20160520101357.1"><vh>編輯 run.py</vh></v>
