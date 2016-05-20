@@ -9,6 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
+<v t="amd.20160520182141.1"><vh>專案說明</vh></v>
 <v t="leo.20160520101324.1"><vh>先跳出  users 目錄</vh></v>
 <v t="leo.20160520094636.2" a="E"><vh>@path ./../</vh>
 <v t="leo.20160520112911.1"><vh>@edit README.md</vh></v>
@@ -36,6 +37,26 @@
 </v>
 </vnodes>
 <tnodes>
+<t tx="amd.20160520182141.1">開始納入
+
+http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support 
+
+配合網站
+
+http://cdw2-ladisai.rhcloud.com/ (2016springwcm At Gmail)
+
+倉儲
+
+https://github.com/2015fallhw/wcmw13 
+
+請注意
+
+1. microblog 目錄中必須有一個 __init__.py 檔案, 以便充做 module, 並由 wsgi.py 中呼叫
+
+2. microblog/app 中的 import 必須從 . 呼叫
+
+
+</t>
 <t tx="leo.20160520094636.2"></t>
 <t tx="leo.20160520100813.1"></t>
 <t tx="leo.20160520100842.1"></t>
@@ -47,6 +68,12 @@
 <t tx="leo.20160520110909.1"></t>
 <t tx="leo.20160520110931.1"></t>
 <t tx="leo.20160520122533.1"></t>
-<t tx="leo.20160520122607.1"></t>
+<t tx="leo.20160520122607.1">Openshift 平台將會以
+
+setup.py 進行配置
+
+以 
+
+wsgi.py 啟動執行</t>
 </tnodes>
 </leo_file>
